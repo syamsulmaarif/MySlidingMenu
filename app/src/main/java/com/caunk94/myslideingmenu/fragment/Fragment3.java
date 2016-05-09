@@ -15,6 +15,7 @@ import com.caunk94.myslideingmenu.R;
  */
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class Fragment3 extends Fragment {
+
     public Fragment3(){}
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
