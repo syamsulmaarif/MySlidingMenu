@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         //init component
 
         listViewSliding = (ListView)findViewById(R.id.lv_sliding_menu);
-        drawerLayout  = (DrawerLayout)findViewById(R.id.drawer_layout);
+        drawerLayout  = (DrawerLayout)findViewById  (R.id.drawer_layout);
         //mainContent = (RelativeLayout)findViewById(R.id.main_content);
         listSliding = new ArrayList<>();
 
@@ -58,11 +58,11 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //display fragment 1 when start
-        replaceFragment(0);
-
         //set Title
         setTitle(listSliding.get(0).getTitle());
+
+        //display fragment 1 when start
+        replaceFragment(0);
 
         //item Slected
         listViewSliding.setItemChecked(0, true);
@@ -71,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.closeDrawer(listViewSliding);
 
         //Handle on item click
-
         listViewSliding.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -123,8 +122,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onPostCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        actionBarDrawerToggle.syncState();
         super.onPostCreate(savedInstanceState, persistentState);
+        actionBarDrawerToggle.syncState();
     }
 
     //create methode replace fragment
